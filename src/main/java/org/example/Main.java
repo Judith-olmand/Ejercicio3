@@ -8,7 +8,7 @@ public class Main {
                 DBConfig.getUrl(),
                 DBConfig.getUser(),
                 DBConfig.getPassword()); Statement statement = conn.createStatement()){
-            System.out.println("Conexión establecida con Oracle.");
+            System.out.println("Conexión establecida con Oracle."); //Mediante Maven
             String sql = "SELECT * FROM empleado WHERE NOT MOD(id,2)=0 " ;
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
